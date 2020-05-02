@@ -25,7 +25,7 @@
     "gulp-svg2png": "^0.3.0",
     "gulp-watch": "^4.2.2",
     "imagemin-pngquant": "^4.0.0",
-    "lodash": "^3.5.0",
+    "lodash": "^4.17.15",
     "serve-index": "^1.6.3"
   },
   "dependencies": {}
