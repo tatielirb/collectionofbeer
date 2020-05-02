@@ -29,6 +29,8 @@
     "serve-index": "^1.6.3"
   },
   "dependencies": {
+    "ejs": "^3.1.2",
+    "lodash.template": "^4.5.0",
     "lodash.update": "^4.10.2"
   }
 }
