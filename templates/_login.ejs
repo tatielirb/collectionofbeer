@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<% include partials/head.ejs %>
+
+<body class="pt">
+
+<main id="login">
+  <div class="container" >
+
+  <div class="row">
+  	<a href="#" class="inicio-logo"><img src="img/logo-inicio.png" alt="Collection Of Beer"></a>  	
+  </div>
+
+    <form class="col-lg-7 form-login">
+      <div class="fieldset">
+        <h2 class="legend">Sou membro</h2>
+
+        <div class="row">
+          <div class="field">
+            <!--  <label for="email">E-mail</label> -->
+            <input type="email" name="email" id="email"  placeholder="E-mail">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <!--  <label for="senha">Senha</label> -->
+            <input type="password" name="senha" id="senha" placeholder="Senha">
+          </div>
+        </div>
+
+
+      <div class="form-controls">
+        <a href="_area-usuaria.html" class="demostracao">Entrar</a>
+
+        <!-- <button class="bt" type="submit">Entrar</button> -->
+        <span class="hidden error-form" id="error-fields">Por favor, preencha os campos corretamente</span>
+      </div>
+
+      <div class="row links">
+      <div class="col-lg-6 ">
+      	<a href="_cadastro.html">Não sou membro</a>
+      </div>
+      <div class="col-lg-6 ">
+      	<a href="_esqueci-senha.html">Esqueceu a senha?</a>
+      </div>
+      	
+      	
+      </div>
+
+
+    </form>
+  </div>
+</main>
+
+<% include partials/footer.ejs %>
+
+</body>
+</html>

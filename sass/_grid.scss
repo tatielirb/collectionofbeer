@@ -1,0 +1,146 @@
+$columns: 12;
+
+$susy: (
+  columns: $columns,
+  gutters: 0.43,
+  math: fluid,
+  output: float,
+  gutter-position: split,
+  container: 1280px
+);
+
+@import "sass/vendor/susy/susy";
+
+@mixin desktop-lg {
+  @media (max-width: 1600px) {
+    @content;
+  }
+}
+
+@mixin desktop-md {
+  @media (max-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin desktop-sm {
+  @media (max-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin tablet-sm {
+  @media (max-width: 960px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mobile-sm {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin mobile-pq {
+  @media (max-width: 375px) {
+    @content;
+  }
+}
+
+@mixin mobile-pqs {
+  @media (max-width: 320px) {
+    @content;
+  }
+}
+
+.container {
+  @include container;
+  padding-left: gutter();
+  padding-right: gutter();
+}
+
+.row {
+  margin-left: gutter() * -1;
+  margin-right: gutter() * -1;
+  text-align: center;
+
+  [class^=col-] {
+    // margin-top: 10px;
+    // margin-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: $pretoClaro;
+  }
+}
+
+/*======================================
+  Responsive Susy Grid
+======================================*/
+
+$i: 1;
+@for $i from 1 through $columns {
+  .col-lg-#{$i} {
+    @include span($i);
+  }
+}
+
+// @include tablet {
+//   $i: 1;
+
+//   %no-float {
+//     float: none;
+//     width: auto;
+//   }
+
+//   @for $i from 1 through $columns {
+//     .col-lg-#{$i} { @extend %no-float; }
+//   }
+
+//   $i: 1;
+//   @for $i from 1 through $columns {
+//     .col-md-#{$i} {
+//       @include span($i);
+//     }
+//   }
+// }
+
+@include mobile {
+  $i: 1;
+
+  %no-float {
+    float: none;
+    width: auto;
+  }
+
+  @for $i from 1 through $columns {
+    .col-md-#{$i} { @extend %no-float; }
+  }
+
+  $i: 1;
+  @for $i from 1 through $columns {
+    .col-sm-#{$i} {
+      @include span($i);
+    }
+  }
+}
+
+.center-block {
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+}
+
+.fl { float: left; }
+.fr { float: right; }

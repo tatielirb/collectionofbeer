@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<% include partials/head.ejs %>
+
+<body class="pt">
+
+<% include partials/header.ejs %>
+
+<main id="checkin">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-lg-12"> 
+        <div class="legendTopo">
+          <h2>Stella Artois</h2>
+          <span>Pais: Brasil</span>
+        </div>
+      </div>
+    </div>
+
+
+   <div class="row">
+    <form class="col-lg-12" id="ckeckBeer">
+      <div class="col-lg-8">
+
+        <div class="rotulo col-lg-2">
+          <div class="foto-rotulo">
+            <div style="background-image: url(img/rotulos/stelaArtois.jpg)" class="img-rotulo"></div>
+          </div>
+        </div>
+
+        <div class="col-lg-10">
+          
+          <div class="row">
+            <div class="field">
+              <textarea name="comentario" id="comentario" cols="30" rows="10" placeholder="Deixe seu comentario" maxlength="140"></textarea>
+              <div class="caracteres">
+                <span id="contador">140</span> caracteres
+              </div>
+            </div>
+          </div>          
+        </div>
+
+        <div class="col-lg-12 validacao">
+          <p>O que você achou? Clássifique essa Cerveja!</p>
+
+          <input class="beer" type="radio" name="avaliacaoBeer" value="1" title="1"/>
+          <input class="beer" type="radio" name="avaliacaoBeer" value="2" title="2"/>
+          <input class="beer" type="radio" name="avaliacaoBeer" value="3" title="3"/>
+          <input class="beer" type="radio" name="avaliacaoBeer" value="4" title="4"/>
+          <input class="beer" type="radio" name="avaliacaoBeer" value="5" title="5"/>         
+          
+        </div>
+        
+      </div>
+
+      <div class="col-lg-4">
+        <div class="uploads cf">
+          <div class="file">
+            <div class="photo">
+              <img src="" alt="">
+            </div>
+
+            <div class="btn-upload">
+              <input type="file" name="" id="">
+              <div class="btn-layer">Incluir Foto</div>
+            </div>
+            <div class="btn-delete">Apagar</div>
+            </div>
+          </div>
+      </div>
+
+      <div class="col-lg-12 btBeer">
+        <a href="_area-usuaria.html" class="finalizarDe">Finalizar</a>
+        <!-- <button class="bt" type="submit">Finalizar</button>  -->         
+      </div>
+
+    </form>
+
+      
+   </div>
+
+
+   
+  </div>
+</main>
+
+
+<% include partials/footer.ejs %>
+
+</body>
+</html>

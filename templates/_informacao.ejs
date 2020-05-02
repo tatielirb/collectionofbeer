@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<% include partials/head.ejs %>
+
+<body class="pt">
+
+<% include partials/header.ejs %>
+
+<main id="informacao">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="fotoInformacao">
+          <div style="background-image: url(img/logo-inicio.png)" class="img"></div>
+        </div>
+      </div>
+
+      <div class="col-lg-12">
+        <div class="descrInfo">
+          <p><span>Collection Of Beer</span> é uma rede social voltada para colecionadores, apreciadores, degustares e  simpatizantes de uma das bebidas mais consumidas no mundo, a cerveja.  A ideia do desenvolvimento  surgi-o devido ao  habito de experimentar diversas cervejas em algumas ocasiões, e por gostar de colecionar garrafas das cervejas degustadas , como esse hábito de me deparei com alguns problemas como: espaço para armazená-las em minha casa, conseguir controlar as cervejas já degustadas através dessa forma e, não ter uma memória muito boa para nomes diferentes, não conseguia lembrar-me de nomes das quais já degustei e manter um diálogo entre meu grupo de amigos com o mesmo interesse.</p>
+
+          <p>O <span>Collection Of Beer</span> é a parte pratica que tem como requisito parcial para obtenção do título de Tecnólogo em Sistemas para Internet, pelo Curso de Sistemas para Internet da Faculdade de Tecnologia Alcides Maya - AMTEC.</p>
+
+          <p>Caso tenha dúvidas, sugestões, quer informar algum erro entre outros tópicos fique a vontade, preencha o formulario abaixo que em breve retorno seu contato!</p>
+
+          <p><span>Tatieli Ramos</span></p>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="row">
+      <form action="" class="col-lg-6 form-contato">
+        <div class="fieldset">
+          <h2 class="legend">Formulário de contato</h2>
+
+            <div class="row">
+              <div class="field">
+                <input type="email" name="email" id="email"  placeholder="tatielirb@gmail.com">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="field">
+                <input type="nome" name="nome" id="nome" placeholder="Tatieli Ramos">
+              </div>
+            </div>
+
+
+            <div class="row">
+              <div class="field">
+                <select name="assunto" id="assunto">
+                  <option value="">Selecione um assunto</option>
+                  <option value="Sugestão">Sugestão</option>
+                  <option value="Elogios">Elogios</option>
+                  <option value="Reclamação">Reclamação</option>
+                  <option value="Informar erro ">Informar erro</option>
+                  <option value="outros">Outros</option>
+                </select>
+              </div> 
+            </div>
+
+
+            <div class="row">
+              <div class="field">
+                <textarea name="infoContato" id="infoContato" cols="30" rows="10" placeholder="Deixe seu comentario" maxlength="800"></textarea>
+                <div class="caracteres">
+                  <span id="contador">800</span> caracteres
+                </div>
+            </div>
+          </div> 
+
+          <div class="form-controls">
+            <button class="bt" type="submit">Enviar</button>
+            <span class="hidden error-form" id="error-fields">Por favor, preencha os campos corretamente</span>
+          </div>        
+
+        </div>        
+      </form>  
+
+    </div>
+
+
+
+
+   
+  </div>
+</main>
+
+
+<% include partials/footer.ejs %>
+
+</body>
+</html>

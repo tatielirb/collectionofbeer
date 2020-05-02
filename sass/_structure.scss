@@ -1,0 +1,157 @@
+/*======================================
+  Estrutura principal
+======================================*/
+header {
+  background: $pretoClaro;
+  position: fixed;
+  width: 100%;
+  max-height: 100px;
+  z-index: 30;
+
+  @include mobile-pq {
+    max-height: 120px;
+    text-align: center;
+  }
+
+
+  .container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+  }
+
+  .topo-logo {
+    float: left;
+    transition: .2s;
+    padding-top: 15px;
+
+    @include mobile-pq {
+      float: none;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+
+/* Menus */
+nav {
+  text-align: left;
+  font-size: 0;
+  background: $pretoClaro;
+  position: absolute;
+  right: 0;
+  top:-160px;
+  padding: 10px;
+  font-family: OpenSans-Italic;
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: all 0.6s;
+  border-radius: 0px 0px 7px 7px;
+  width: 22.4941724942%;
+  float: left;
+  margin-left: 1.2529137529%;
+  margin-right: 1.2529137529%;
+
+  @include mobile {
+    width: 33%;
+  }
+
+  @include mobile-sm {
+    width: 45%;
+    top:96px;
+  }
+
+   @include mobile-pq {
+    width: 100%;
+    margin-left:0;
+    margin-right: 0;
+    top:120px;
+    text-align: center;
+    transform: translateY(-264px);
+  }
+
+  &.ativo{
+    opacity: 1;
+    transform: translateY(0);
+    top:96px;
+  }
+
+
+  li {
+    display: block;
+    font-size: 16px;
+    color: $branco;
+    padding-left: 20px;
+    padding-bottom: 10px;
+
+    + li {
+      // padding-left: 20px;
+    }
+  }
+
+  a {
+    transition: .2s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    .font{
+
+    }
+
+    .icon {
+      margin-right: 8px;
+      font-size: 22px;
+    }
+    .icon-estante:before,
+    .icon-seguindo:before,
+    .icon-seguidores:before,
+    .icon-check:before,
+    .icon-zoom:before,
+    .icon-configuracao:before,
+    .icon-sair:before,
+    .icon-informacao:before {
+      margin-top: 5px;
+    }
+  }
+}
+
+
+/* Geral */
+.main-wrapper {
+  overflow: hidden;
+}
+
+
+/* Rodapé */
+footer {
+  background: #EFEFEF;
+  border-top: 1px solid #E0E0E0;
+
+  .container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    li a {
+      color: #FFF;
+      font: inherit;
+
+      &:hover {
+        color: #999;
+      }
+    }
+
+    .r-copy {
+      text-align: center;
+
+      a:hover {
+        color: #777;
+      }
+    }
+  }
+}
+

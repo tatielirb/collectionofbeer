@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<% include partials/head.ejs %>
+
+<body class="pt">
+
+<% include partials/header.ejs %>
+
+<main class="amigos">
+  <div class="container">
+
+  <div class="row">
+    <div class="col-lg-12"> 
+      <div class="legendTopo">
+        <h2>Followers</h2>
+        <span>200 seguidores</span>
+      </div>
+    </div>
+  </div>
+  
+   <div class="row">
+    <div class="col-lg-12"> 
+      <form action="" class="pesquisa">
+        <div class="field">
+          <input type="pesquisar" name="pesquisar" id="pesquisar" placeholder="Pesquisar">
+          <button class="bt" type="submit">Buscar</button>
+        </div>          
+      </form>
+    </div>
+   </div>
+
+
+    <div class="row">
+      <% include _modulo-followers.ejs %>
+      <% include _modulo-followers.ejs %>
+      <% include _modulo-followers.ejs %>
+      <% include _modulo-followers.ejs %> 
+      <% include _modulo-followers.ejs %> 
+    </div>
+
+
+   
+  </div>
+</main>
+
+
+<% include partials/footer.ejs %>
+
+</body>
+</html>

@@ -1,0 +1,175 @@
+/*======================================
+  Formulários
+======================================*/
+form {
+  margin: 20px 0 0;
+
+  .row {
+    margin: 45px 0 0;
+
+    & + .row {
+     margin: 20px 0 0;
+    }
+  }
+  
+}
+
+.fieldset {
+  margin: 20px 0 0;
+}
+
+.legend {
+  // text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.field-group {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+
+  .field {
+    display: table-cell;
+
+    & + .field {
+      padding-left: 20px;
+    }
+  }
+}
+
+label, .label {
+  margin-bottom: 6px;
+  display: block;
+  font-family: OpenSans-LightItalic;
+  font-size: 20px;
+
+
+  &.inline {
+    @include inline-block;
+    margin-right: 20px;
+  }
+
+  .obs {
+    font-size: 12px;
+  }
+}
+
+.field {
+  input[type=text],
+  input[type=url],
+  input[type=tel],
+  input[type=number],
+  input[type=color],
+  input[type=email],
+  input[type=password],
+  // input[type=confirSenha],
+  input[type=nome],
+  input[type=dataNascimento],
+  // input[type=senhaNova],
+  select,
+  textarea {
+    background: none;
+    border: 1px solid $pretoClaro;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    color: $preto;
+    font-size: 15px;
+    transition: .2s;
+    border-radius: 10px;
+
+    &::-webkit-input-placeholder {
+       color: $pretoClaro;
+       font-family: open_sansregular;
+    }
+
+    &:-moz-placeholder {
+       color: $pretoClaro;
+       font-family: open_sansregular;
+    }
+
+    &::-moz-placeholder {
+       color: $pretoClaro;
+       font-family: open_sansregular;
+    }
+
+    &:-ms-input-placeholder {  
+       color: $pretoClaro;
+       font-family: open_sansregular;
+    }
+
+
+    &:focus {
+      border-color: #999;
+      background: rgba(255, 255, 255, 0.1);
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  input[type=text],
+  input[type=url],
+  input[type=tel],
+  input[type=number],
+  input[type=color],
+  input[type=email],
+  input[type=senha],
+  input[type=confirSenha],
+  input[type=nome],
+  input[type=dataNascimento],
+  input[type=senhaNova]{
+    height: 40px;
+  }
+  
+
+  select {
+    height: 40px;
+    padding: 10px 15px;
+  }
+
+  textarea {
+    resize: none;
+    overflow: auto;
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    margin-right: 2px;
+    position: relative;
+    top: 1px;
+    *overflow: hidden;
+  }
+}
+
+.field-group-choice {
+  .field-group {
+    width: auto;
+  }
+
+  .field {
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
+    margin: 0;
+  }
+}
+
+.form-controls {
+  margin-top: 20px;
+
+  span {
+    font-size: 12px;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .error-form {
+    color: #C00;
+  }
+
+  .success-form {
+    color: #0C0;
+  }
+}

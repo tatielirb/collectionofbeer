@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'Icons';
+  src: url('fonts/Icons.eot');
+  src: url('fonts/Icons.eot?#iefix') format('eot'),
+       url('fonts/Icons.woff') format('woff'),
+       url('fonts/Icons.ttf') format('truetype'),
+       url('fonts/Icons.svg#Icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon:before {
+  @include inline-block;
+  font-family: 'Icons';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-informacao:before { content: "\E010" }
+.icon-avalicao:before { content: "\E001" }
+.icon-brindar:before { content: "\E002" }
+.icon-check:before { content: "\E003" }
+.icon-close:before { content: "\E004" }
+.icon-comentarios:before { content: "\E005" }
+.icon-configuracao:before { content: "\E006" }
+.icon-estante:before { content: "\E007" }
+.icon-foto:before { content: "\E008" }
+.icon-sair:before { content: "\E009" }
+.icon-seguidores:before { content: "\E00A" }
+.icon-seguindo:before { content: "\E00B" }
+.icon-zoom:before { content: "\E00C" }
+.icon-excluir:before { content: "\E00D" }
+.icon-userAdd:before { content: "\E00E" }
+.icon-userVal:before { content: "\E00F" }

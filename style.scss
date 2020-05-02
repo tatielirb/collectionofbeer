@@ -1,0 +1,2665 @@
+/*!
+  Theme Name: Tatieli Ramos Framework
+  Theme URI: http://tatielirb.com
+  Author: Collection Of Beer
+  Author URI: http://collectionofbeer.com/
+  Version: 1.0
+*/
+
+$pretoClaro: #333;
+$preto:#000;
+$branco:#fff;
+$amarelo:#F2CF65;
+$verde:#63803D;
+$verdeEscuro:#93A37A;
+$verdeClaro:#9FB28B;
+$gelo:#ECECFB;
+$creme:#EFEADC;
+$cinza:#666;
+$cinzaClaro:#B9B9C8;
+$cinzaClaro: #9B9B9B;
+$marrom: #9F503C;
+$marromClaro:#A38364;
+$vermelho:#be1931;
+
+@import "sass/normalize";
+@import "sass/global";
+@import "sass/grid";
+@import "sass/structure";
+@import "sass/fonts";
+@import "sass/icons";
+@import "sass/buttons";
+@import "sass/forms";
+
+@import "sass/vendor/selectric";
+@import "sass/vendor/mfp/main";
+@import "sass/vendor/sweet";
+
+
+/*======================================
+  Definições Gerais
+======================================*/
+.inicio-logo {
+	transition: .2s;
+	margin: 0px auto;
+
+	img{
+		margin: 85px auto;
+
+		@include mobile {
+			margin: 50px auto;
+		}
+
+		@include mobile-pq {
+			margin: 30px auto;
+		}
+	}
+
+	&:hover {
+	  opacity: 0.8;
+	}
+}
+
+/*======================================
+  Pagina de Login
+======================================*/
+#login{
+	background-image: url(img/bg/bg-login.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 968px;
+
+    .col-lg-7{
+		@include mobile {
+    		width: 80.827506%;    	
+	    }
+
+	    @include mobile-sm {    	
+			width: 92.827506%;    	
+	    }
+    }
+    
+
+    .form-login{
+       margin: 0 auto;
+       float: none;
+       background: rgba(255,255,255, 0.8);
+       border-radius: 20px 20px 0px 0;
+
+    	.legend{
+			background-color: $pretoClaro;
+			width: 100%;
+			text-align: center;
+			color:$branco;
+			font-size: 30px;
+			font-family: open_sansbold;
+			border-radius: 15px 15px 0px 0;
+			padding: 0.8em 0;
+
+			@include mobile {
+				font-size: 26px;
+			}
+
+			@include mobile {
+				font-size: 24px;
+			}
+
+			@include mobile-pq {
+				font-size: 20px;
+			}
+        }
+
+        .field {
+		  input[type=email],
+		  input[type=password] {
+		    background: none;
+		    border: 1px solid $pretoClaro;
+		    width: 70%;
+		    padding: 10px;
+		    box-sizing: border-box;
+		    color: #555;
+		    font-size: 15px;
+		    transition: .2s;
+		    border-radius: 10px;
+
+
+		    &:focus {
+		      border-color: #999;
+		      background: rgba(255, 255, 255, 0.1);
+		      outline: none;
+		      box-shadow: none;
+		    }
+  		  }
+        } 
+
+        .form-controls{
+        	text-align: center;
+        	padding-bottom: 30px;
+
+        	.bt{
+	    	   position: none;
+	    	   display: inline-block;
+        	}
+        }
+
+      .links{
+      	font-family: open_sansregular;
+      	font-size: 16px;
+      	text-transform: uppercase;
+      	transition: .2s;
+      	color:$pretoClaro;
+      	padding-bottom: 30px;
+
+      	a{
+
+      	 &:hover{
+      	  color:$verde;
+      	 }
+      	}
+      } 
+    }
+}
+
+/*======================================
+  Pagina de Cadastro
+======================================*/
+
+#cadastro{
+	background-image: url(img/bg/bg-login.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 968px;
+
+
+    .col-lg-7{
+		@include mobile {
+    		width: 92.827506%;    	
+	    }
+
+	    @include mobile-sm {    	
+			width: 92.827506%;    	
+	    }
+    }
+
+    .selectricWrapper{
+    	@include mobile {
+    		margin-left: 34px;
+    	}
+
+    	@include mobile-sm {
+    		margin-left: 19px;
+    	}
+    }
+
+    form {
+    	.row{
+			@include mobile {
+				margin: 5px 0 0;
+			}
+    	}
+    }
+
+    
+
+    .form-cadastro{
+       margin: 0 auto;
+       float: none;
+       background: rgba(255,255,255, 0.8);
+       border-radius: 20px 20px 0px 0;
+
+    	.legend{
+			background-color: $pretoClaro;
+			width: 100%;
+			text-align: center;
+			color:$branco;
+			font-size: 30px;
+			font-family: open_sansbold;
+			border-radius: 15px 15px 0px 0;
+			padding: 0.8em 0;
+
+			@include mobile {
+				font-size: 26px;
+			}
+
+			@include mobile {
+				font-size: 24px;
+			}
+
+			@include mobile-pq {
+				font-size: 20px;
+			}
+        }
+
+        .field {
+        	padding-left: 40px;
+        	
+
+        	@include mobile {
+    			padding-left: 0;
+    			display: block; 
+
+	    	}
+
+        	& + .field {
+		      padding-left: 0px;
+		      padding-right: 40px;
+
+		      @include mobile {
+    			padding-right: 0;
+    			padding-top: 7px;  	
+	    	  }
+		    }
+
+		  input[type=email],
+		  input[type=password],
+		  input[type=nome],
+		  input[type=dataNascimento],
+		  select {
+		    background: none;
+		    border: 1px solid $pretoClaro;
+		    width: 90%;
+		    padding: 10px;
+		    box-sizing: border-box;
+		    color: #555;
+		    font-size: 15px;
+		    transition: .2s;
+		    border-radius: 10px;
+
+
+		    &:focus {
+		      border-color: #999;
+		      background: rgba(255, 255, 255, 0.1);
+		      outline: none;
+		      box-shadow: none;
+		    }
+  		  }
+        } 
+
+        .form-controls{
+        	text-align: center;
+        	padding: 40px 0;
+
+        	.bt{
+	    	   position: none;
+	    	   display: inline-block;
+        	}
+        }
+
+	    .links{
+	      	font-family: open_sansregular;
+	      	font-size: 16px;
+	      	text-transform: uppercase;
+	      	transition: .2s;
+	      	color:$pretoClaro;
+	      	padding-bottom: 30px;
+
+	      	a{
+
+		      	&:hover{
+		      	  color:$verde;
+		      	}
+	      	}
+	    } 
+    }
+}
+
+/*==================================
+foto usuario
+====================================*/
+
+.fotoUsuario{
+    width: 70px;
+    float: left;
+
+    @include tablet-sm {
+      width: 60px;
+    }
+
+    @include mobile-sm {
+      width: 40px;
+      margin-top: 10px;
+    }
+
+    .foto{
+	  display: inline-block;
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      margin: 6px;
+      text-align: center;
+
+	    .img {
+	       display: inline-block;
+	       background-position: 50% 50%;
+	       background-size: cover;
+	       height: 0px;
+	       width: 100%;
+	       padding-top: 100%;
+	       position: relative;
+	       border-radius: 100%;
+	    }
+	}
+}
+/*==================================
+Rotulo
+====================================*/
+
+.rotulo{
+
+    @include mobile-pq {
+    	width: 35px;
+    }
+
+    .foto-rotulo{
+	  display: inline-block;
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      margin: 6px;
+      text-align: center;
+
+      @include mobile-pq {
+      	margin: 15px 6px;
+      }
+
+	    .img-rotulo {
+	       display: inline-block;
+	       background-position: 50% 50%;
+	       background-size: cover;
+	       height: 0px;
+	       width: 100%;
+	       padding-top: 100%;
+	       position: relative;
+	    }
+	}
+}
+
+/*==================================
+Informações usuario header
+====================================*/
+.info-usuario{
+	float: right;
+	margin-top: -10px;
+
+	@include tablet{
+	   width: 26%
+	}
+
+	@include mobile {
+    	width: 40%;
+    }
+
+    @include mobile-sm {
+    	width: 40%;
+    	margin: 0 auto;
+    }
+
+    @include mobile-pq {
+    	width: 72%;
+    	margin: 0 auto;
+    }
+
+
+	a{
+		float: left;
+		position: relative;
+	}
+    
+    .center, i {
+      @include inline-block('middle');
+	}
+
+	i {
+	  height: 100%;
+	}
+
+    h2{
+      font-family: OpenSans-Italic;
+      font-size: 20px;
+      color:$branco;
+      margin-top: 30px;
+      margin-left: 15px;
+
+      @include mobile-sm {
+      	font-size: 13px;
+      }
+    }
+}
+
+
+
+/*==================================
+ Beerline
+====================================*/
+#beerline{
+	.container{
+	  padding-top: 130px;
+	}
+}
+
+
+.topoBeer{
+   margin-left: 0px !important;
+
+    .infoAcao{
+	  float:left;
+	  font-size: 14px;
+	  font-family: open_sansregular;
+	  color:$cinza;
+	  text-align: left;
+	  margin-top: 32px;
+	  margin-left: 20px;
+
+	  @include mobile-pq {
+	  	margin-top: 13px;
+	  }
+
+	  span{
+	  	font-family: OpenSans-Italic;
+	  	font-size: 16px;
+	  	color:$preto;
+	  }
+    }
+
+    .rotulo{
+    	width: 70px;
+        float: right;
+
+        @include mobile-pq {
+        	width: 35px;
+        }
+
+	    .foto-rotulo{
+	      @include mobile-pq {
+	      	margin: 15px 6px;
+	      }
+		}
+    }
+}
+/*=====================================
+  Comentario do avaliador
+======================================*/
+
+.comment-avaliacao{
+	position: relative;
+	margin-top: 10px;
+
+    span{
+	  background: $branco;
+	  display: block;
+	  text-align: left;
+	  font-size: 12px;
+	  color:$verde;
+	  font-family: open_sansregular;
+	  padding: 10px;
+	}
+
+	&:after{
+	  content: "";
+	  width: 0;
+	  height: 0;
+	  position: absolute;
+	  top: -23px;
+      left: 20px;
+	  display: block;
+	  border: 12px solid transparent;
+	  border-bottom-color: $branco !important;
+	}
+}
+
+/*=====================================
+  Avaliação da cerveja
+======================================*/
+
+.avaliacao{
+	text-align: left;
+	margin-left: 0 !important;
+	margin-top: 6px;
+
+	.icon{
+		float: left;
+		color: $cinzaClaro;
+	}
+	.icon-avalicao:before{
+		font-size: 30px;
+
+		@include tablet{
+		  font-size: 24px;
+		}
+		
+	}
+	.avaliado{
+		color:$amarelo;
+	}
+}
+/*=====================================
+  data
+======================================*/
+
+.data{
+	text-align: right;
+	font-size: 10px;
+	font-family: open_sansregular;
+	color: $verde;
+	margin: 10px 0px 0px 22px;
+
+	@include desktop-sm {
+	  margin: 10px 0px 0px 20px;
+	}
+
+	@include tablet {
+	   margin: 10px 0px 0px 16px;
+	}
+
+	@include mobile-pq {
+	  margin: 10px 0px 0px 5px;
+	}
+}
+
+/*=====================================
+ foto da cerveja
+======================================*/
+
+.fotoCerveja{
+	margin-top: 0;
+	margin-bottom: 0;
+
+	.foto{
+	  display: inline-block;
+	  width: 100%;
+	  height: 100%;
+	  background-repeat: no-repeat;
+	  text-align: center;
+
+		.img {
+		   display: inline-block;
+		   background-position: 50% 50%;
+		   background-size: cover;
+		   height: 0px;
+		   width: 100%;
+		   padding-top: 50%;
+		   position: relative;
+		 }
+	}
+}
+
+/*=====================================
+  Brindar
+======================================*/
+.confBrind{
+  position: relative;
+  z-index: 10;
+}
+
+.brindar{
+	text-align: left;
+	margin-top: 10px;
+	margin-bottom: 0;
+
+	@include tablet {
+		width: 100%;
+	}
+
+	@include mobile {
+		width: 55.8275058275%;
+	}
+
+	.icon-brindar:before{
+		font-size: 30px;
+		color:$verde;
+		float: left;
+
+		@include mobile-pq {
+		  font-size: 20px;
+		}
+	}
+
+	@include mobile-sm {
+		width: 100%;
+	}
+
+	span{
+	  color:$verde;
+	  font-family: OpenSans_Light;
+	  font-size: 13px;
+	  float: left;
+	  margin: 8px 0 0 10px;
+
+	  @include mobile-pq {
+	  	margin: 4px 0 0 10px;
+	  }
+	}
+
+	a{
+		&:hover{
+		  	color:$marrom;
+		}
+	}
+}
+
+#usuarios-brindes{
+	button.mfp-close{
+	  position: absolute;
+	  right: 750px;
+	  top:8px;
+	  color:$branco;
+	}
+}
+/*=====================================
+  Lista de Brindes
+======================================*/
+.listaBrindes{
+	text-align: center;
+
+	.fotoUsuario{
+	    width: 50px;
+	    float: left;
+    }
+
+    .brindesLista{
+      width: 20%;
+      background: #fff;
+      position: relative;
+      left: 40%;
+      border-radius: 20px 20px 0px 0;
+      height: 100%;
+      overflow: hidden;
+
+      
+
+	  .legend{
+		background-color: $pretoClaro;
+		width: 100%;
+		text-align: center;
+		color:$branco;
+		font-size:18px;
+		font-family: open_sansbold;
+		border-radius: 15px 15px 0px 0;
+		padding: 0.8em 0;
+	   }
+
+      li{
+      	float: left;
+      	width: 100%;
+
+      	a{
+      	  float: left;
+		  line-height: 60px;
+		  margin-left: 10px;
+		  color:$preto;
+      	}
+
+  	    button{
+	  	   border: none;
+	  	   background: $verdeEscuro;
+	  	   border-bottom: 2px solid $pretoClaro;
+	  	   border-radius: 8px;
+	       font-size: 16px;
+	  	   padding:0 30px;
+	  	   text-align: center;
+	  	   height: 40px;
+	  	   color:$branco;
+	  	   @include inline-block;
+	       transition: .2s;
+		   transform: translateZ(0) scale(1);
+		   outline: none;
+		   margin-top: 10px;
+
+		  &:hover{
+			background: $pretoClaro;
+	  		border-bottom: 2px solid $verdeEscuro;
+		  }
+      	}
+      }
+    }
+
+}
+
+.linksAcoes{
+	margin-right: 0px;
+	position: relative;
+	
+	@include tablet {
+	  width: 100%;
+	}
+
+	@include mobile {
+		width: 39.1608391608%;
+	}
+
+	@include mobile-sm {
+		width: 100%;
+	}
+	
+	
+	a{
+	  float: right;
+	  font-family: open_sansregular;
+	  font-size: 16px;
+	  color:$verde;
+	  width: 40%;
+	  text-align: center;
+	  margin: 0 10px;
+	  transition: .2s;
+
+	  @include tablet {
+	  	float: left;
+	  	margin: 0;
+	  }
+
+
+	  .icon-comentarios:before,
+	  .icon-brindar:before{
+	  	font-size: 22px;
+	  }
+
+	  &:hover{
+	  	color:$marrom;
+	  }
+	}  
+
+	.btComentar{
+	  float: right;
+	  font-family: open_sansregular;
+	  font-size: 16px;
+	  color:$verde;
+	  width: 40%;
+	  text-align: center;
+	  margin: 0 10px;
+	  transition: .2s;
+	  cursor: pointer;
+
+	  @include tablet {
+	  	margin: 0 0px;
+	  }
+
+	  .icon-comentarios:before {
+	  	font-size: 22px;
+	  }
+
+
+	  &:hover{
+	  	color:$marrom;
+	  }
+	  &.active{
+	  	color:$marrom;
+	  }
+	}
+}
+/*=====================================
+  Comentarios
+======================================*/
+#comentar{
+	z-index: -0!important;
+	transition: 0.6s;
+
+	.comentar{
+		width: 100%;
+		padding:2px;
+		position: relative;
+		margin: 0 0 10px 0;
+		font-family: open_sansregular;
+		opacity: 0;
+		transform: translateY(-100px);
+		transition: 0.6s;
+		height: 0;
+		z-index: 1;
+		position: relative;
+
+		&.ativo{
+		    opacity: 1;
+		    transform: translateY(0);
+		    height: 100%;
+	  	}
+
+		.caracteres{
+			font-family: OpenSans-Italic;
+			font-size: 12px;
+			text-align: right;
+			width: 90%;
+			padding: 6px;
+			margin: 0 auto;
+		}
+
+		.row{
+		  margin: 10px 0 0;
+		}
+
+		.field {
+
+		  textarea {
+		    background: none;
+		    border: 1px solid $cinzaClaro;
+		    width: 90%;
+		    padding: 10px;
+		    box-sizing: border-box;
+		    color: $pretoClaro;
+		    font-size: 15px;
+		    transition: .2s;
+		    height: 50px; 
+		    border-radius: 0px;
+		    overflow: auto;
+
+		    &:focus {
+		      border-color: #999;
+		      background: rgba(255, 255, 255, 0.1);
+		      outline: none;
+		      box-shadow: none;
+		    }
+		  }
+	    } 
+
+	    .btComentario, .btComentario:focus, .btComentario:active {
+		  height: 40px;
+		  border: none;
+		  background: $verde;
+		  color: #FFF;
+		  @include inline-block;
+		  padding: 0 30px;
+		  border-bottom: 2px solid $branco;
+		  border-radius: 10px;
+		  font: 14px/40px 'open_sansbold';
+		  transition: .2s;
+		  transform: translateZ(0) scale(1);
+		  outline: none;
+		  position: relative;
+		  margin-bottom: 12px;
+		  cursor: pointer;
+
+		}
+
+		a.btComentario:active, button.btComentario:active {
+		  transform: translateZ(0) scale(0.96);
+		}
+
+		a.btComentario:hover, button.btComentario:hover {
+		  opacity: 0.8;
+		}
+
+	}
+}
+
+.comentario{
+	background: $gelo;
+	width: 100%;
+	padding:2px;
+	position: relative;
+	margin: 0 0 10px 0;
+	font-family: open_sansregular;
+	transition: 0.6s;
+
+	.fotoUsuario{
+      width: 5%;
+      float: left;
+      margin-top: 12px;
+
+      @include mobile-pq {
+      	width: 13%;
+      }
+    }
+
+    .info{    	
+      float: left;
+      text-align: left;
+      font-size: 12px;
+
+      @include mobile-pq {
+      	 width: 80%;
+      }
+
+
+      p{
+		margin-bottom: 22px;
+		color:$verde;
+      }
+      span{
+      	margin-right: 10px;
+      	color:$verde;
+      }
+
+    	.linksComen{
+    		position: absolute;
+    		bottom: 0;    		
+
+    		a{
+    		  transition:.3s;
+    		  margin-right: 10px;
+    		  color:$verde;
+
+    		  	&:hover{
+    			  color: $marrom;
+    			}
+    		}
+    	}    	
+    }
+}
+/*=====================================
+ remover
+======================================*/
+.remover{
+	a{
+		float: right;
+		text-align: right;
+		color:$verde;
+		transition:.3s;
+		font-family: open_sansbold;
+
+		&:hover{
+			color: $marrom;
+		}
+
+		.icon{
+		  float: left;
+	    }
+	}	
+}
+/*=====================================
+  Topo 
+======================================*/
+
+.legendTopo{
+   background-color: $pretoClaro;
+   width: 100%;
+   text-align: center;
+   color:$branco;   
+   border-radius: 15px 15px 0px 0;
+   padding: 0.8em 0;
+    margin-bottom: 20px;
+
+   h2{
+	font-size: 20px;
+    font-family: open_sansbold;
+   }
+   span{
+	 font-size: 18px;
+	 font-family: OpenSans-Italic;
+   }
+}
+
+/*=====================================
+  Historico Estante
+======================================*/
+.estante{
+	.container{
+	  padding-top: 140px;
+	}
+
+	.cervejaEstante{
+		.nomeCerveja{
+		   background-color: $verdeClaro;
+		   width: 100%;
+		   text-align: left;
+		   color:$branco;   
+		   border-radius: 15px 15px 0px 0;
+  		   padding: 0.8em 0;
+  		   font-family: OpenSans-Italic;
+  		   font-size: 20px;
+  		   padding: 10px;
+
+		}
+
+		.rotulo{
+	    	width: 110px;
+	        float: left;
+        }
+
+        .infoCerveja{
+        	float: left;
+
+        	p{
+        		font-family: open_sansregular;
+			    font-size: 16px;
+			    color: #A38364;
+			    line-height: 10px;
+			    text-align: left;
+			    margin-left: 30px;
+        	}
+        }
+
+        .infoAdd{
+			width: 100%;
+			border-top: 1px solid $marromClaro;
+			border-bottom: 1px solid $marromClaro;
+			float: left;
+			padding-bottom: 2px;
+
+			.icon-avalicao:before{
+				font-size: 16px;				
+			}
+
+			.geralInfo{
+				float: left;
+				color: $verdeClaro;
+				font-size: 16px;
+				line-height: 20px;
+
+				@include tablet {
+					width: 100%;
+					text-align: left;
+				}
+
+				@include mobile{
+					text-align: none;
+					width: 20%;
+				}
+
+				@include mobile-pq {
+					width: 100%;
+					text-align: left;
+				}
+			}
+
+			.ibu{
+				margin: 0 10px;
+
+				@include tablet {
+					margin: 0 0px;
+				}
+
+				@include mobile {
+					margin: 0 10px;
+				}
+
+				@include mobile-pq {
+					margin: 0 0px;
+				}
+			}
+			.volume{
+
+				margin: 0 10px;
+
+				@include tablet {
+					margin: 0 0px;
+				}
+
+				@include mobile {
+					margin: 0 10px;
+				}
+
+				@include mobile-pq {
+					margin: 0 0px;
+				}
+			}
+			.data{
+				float: right;
+				margin: 0;
+
+				@include tablet {
+					float: left;
+				}
+
+				@include mobile {
+					float: right;
+				}
+
+				@include mobile-sm{
+					float: left;
+				}
+			}
+        }
+	}
+}
+
+/*=====================================
+  Pesquisa paginas
+======================================*/
+.pesquisa{
+	margin: 0 0 30px;
+
+	@include mobile-pq {
+		margin: 0 0 15px;
+	}
+
+	.bt{
+	  border-bottom: 2px solid $pretoClaro;
+	  background: $preto;
+	  text-transform: none;
+	  cursor: pointer;
+
+	  @include tablet {
+	  	padding: 0 40px;
+	  }
+
+	  @include mobile-pq {
+	  	padding: 0 15px;
+	  }
+	}
+
+	.field {
+        padding-left: 0px;
+        text-align: right;
+
+
+        & + .field {
+		    padding-left: 0px;
+		    padding-right: 40px;
+		}
+
+		input[type=pesquisar] {
+		    background: none;
+		    border: 1px solid $pretoClaro;
+		    width: 35%;
+		    padding: 10px;
+		    box-sizing: border-box;
+		    color: #555;
+		    font-size: 15px;
+		    transition: .2s;
+		    border-radius: 10px;
+
+		    @include mobile-sm {
+		    	width: 69%;
+		    }
+
+		    @include mobile-pq {
+		    	width: 63%;
+		    }
+
+
+		    &:focus {
+		      border-color: #999;
+		      background: rgba(255, 255, 255, 0.1);
+		      outline: none;
+		      box-shadow: none;
+		    }
+  		}
+    } 
+}
+/*=====================================
+  Fallowing e Fallowers
+======================================*/
+.amigos{
+	.container{
+	   padding-top: 140px;
+	}
+
+	.col-lg-3{
+		@include mobile-sm{
+			width: 47%;
+		}
+
+		@include mobile-pq {
+			width: 97%;
+		}
+	}
+
+	.fallow{
+	    border-radius: 15px 15px 0px 0;
+	    background: $branco;
+	    padding-bottom: 0px;
+	    padding-top: 0px;
+	    position: relative;
+	    border:1px solid #e1e8ed;
+	    margin-bottom: 30px;
+	    padding-bottom: 1em;
+
+	    @include mobile-pq {
+	      margin-bottom: 10px;
+	      border-radius: 0px 0px 0px 0;
+	      padding-bottom: 0;
+	    }
+
+		.fotoUsuario{
+		  	position: absolute;
+		    float: none;
+		    left: 6px;
+		    top: 70px;
+		    display: block;
+
+		    @include tablet{
+		    	top: 56px;
+                width: 50px;
+		    }
+
+		    @include mobile {
+		    	top: 35px;
+		    	left: 0px;
+		    }
+
+		    @include mobile-sm {
+		    }
+
+		    @include mobile-pq{
+		    	width: 50px;
+		    	top: 0px;
+		    	position: relative;
+		    	float: left;
+		    }
+		}
+
+		.button-following{
+			background: $verdeEscuro;
+		  	border-bottom: 2px solid $pretoClaro;
+		  	transition: .3s;
+
+		  	&:hover{
+		  		background: $vermelho;
+		  	    border-bottom: 2px solid $preto;
+		  	}
+
+		  	.following-text{
+			  display: block;
+			  transition: .3s;
+
+			  &:hover{
+		  	    .following-text{
+					display: none;
+			   	}
+
+			   	.unfollow-text{
+			   		display: block;
+			   	}	
+			  }
+			}
+
+		   	.unfollow-text{
+		   	  display: none;
+		   	}	
+
+		   	.follow-text{
+			   display: none;				   	
+			}
+		}
+
+		.button-follow{
+			background: $pretoClaro;
+		  	border-bottom: 2px solid $verdeEscuro;
+		  	transition: .3s;
+
+		  	&:hover{
+		  		background: $preto;
+		  	}
+
+		  	.following-text{
+			  display: none;
+			  transition: .3s;
+
+			  &:hover{
+		  	    .following-text{
+					display: none;
+			   	}
+
+			   	.unfollow-text{
+			   		display: block;
+			   	}	
+			  }
+			}
+
+		   	.unfollow-text{
+		   	  display: none;
+		   	}	
+
+		   	.follow-text{
+			   display: block;				   	
+			}
+		}
+
+		button{
+		  	border: none;
+		  	border-radius: 8px;
+		    font-size: 16px;
+		  	text-align: center;
+		  	height: 40px;
+		  	color:$branco;
+		  	@include inline-block;
+		    transition: .3s;
+			transform: translateZ(0) scale(1);
+			outline: none;
+			margin-top: 2px;
+			float: right;
+			margin-right: 6px;
+			width: 130px;
+			font-family: open_sanssemibold;
+
+			@include tablet {
+				width: 120px;
+				height: 30px;
+				font-size: 14px;
+			}
+
+			@include mobile {
+				width: 100px;
+				height: 30px;
+				font-size: 12px;
+			}
+
+			@include mobile-pq {
+				margin-top: 28px;
+				width: 80px;
+			}
+		    	 
+		}
+
+		.nomeUsuario{
+			width: 100%;
+			color:$pretoClaro;
+			float: left;
+			text-align: left;
+			font-family: open_sansbold;
+			font-size: 22px;
+			margin-left: 6px;
+			margin-top: 4px;
+
+			&:hover{
+				text-decoration: underline;
+			}
+
+			@include mobile {
+				font-size: 16px;
+			}
+
+			@include mobile-pq {
+				width: 40%;
+				margin-left: 20px;
+				margin-top: 28px;
+			}
+		}
+
+		p{
+			color:$preto;
+			font-size: 12px;
+			font-family: OpenSans-Italic;
+			float: left;
+			width: 100%;
+			padding: 6px;
+			text-align: left;
+			line-height: 1.375em;
+    		height: 5.5em;
+
+    		@include mobile-pq{
+		    	display: none;
+		    }
+		}
+	}
+
+	.capa{
+		z-index: 1;
+
+		@include mobile-pq{
+		    display: none;
+		}
+	    .foto-capa{
+		  display: inline-block;
+	      width: 100%;
+	      height: 100%;
+	      background-repeat: no-repeat;
+	      // margin: 6px;
+	      text-align: center;
+
+		    .img-capa {
+		       display: inline-block;
+		       background-position: 50% 50%;
+		       background-size: cover;
+		       height: 0px;
+		       width: 100%;
+		       padding-top: 40%;
+		       position: relative;
+		       border-radius: 15px 15px 0px 0;
+		    }
+		}
+	}
+}
+
+/*=====================================
+  Perfil
+======================================*/
+#perfil{
+
+	.container{
+	   padding-top: 90px;
+	}
+}
+
+.infoPerfio{
+	z-index: 1;
+	position: relative;
+	display: inline-block;
+    height: 100%;
+    background-repeat: no-repeat;
+    padding-bottom: 110px !important;
+
+    @include tablet-sm {
+    	width: 100%;
+    	margin-left: 0;
+    	margin-right: 0;
+    	padding-bottom: 80px !important;
+
+    }
+
+
+    .font{
+		@include mobile-sm {
+					display: none;
+		}
+	}
+	  
+
+	.img-capa {
+       display: inline-block;
+       background-position: 50% 50%;
+       background-size: cover;
+       height: 0px;
+       width: 100%;
+       padding-top: 30%;
+       position: relative;
+
+       @include mobile-pq {
+       	 padding-top: 40%;
+       }
+
+	    &:after{
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.3);
+			top: 0;
+			left: 0;
+		}
+	}
+
+
+	.fotoUsuario{
+		width: 110px;
+		float: left;
+		margin-left: 20px;
+
+		@include mobile-sm {
+			width: 60px;
+			margin-left: 0px;
+		}
+	}
+
+	
+	.dadosPerfio{
+		position: absolute;
+		z-index: 14;
+		bottom: 0;
+
+		a{
+			top: 0%;
+		    bottom: 0;
+		    min-width: 200px;
+		    position: absolute;	
+		    text-align: left;		    
+
+			.valign {
+			  i, .center {
+			    @include inline-block('middle');
+			  }
+
+			  i {
+			    height: 100%;
+			  }
+			}
+
+
+		    h2{
+		        color:$branco;
+				float: left;
+				text-align: left;
+				font-family: OpenSans-Italic;
+				font-size: 30px;
+				margin-left: 12px;
+
+				@include mobile-sm {
+					font-size: 20px;
+				}
+
+				&:hover{
+				 text-decoration: underline;
+			    }
+		    }			   
+		}
+	}		
+}
+
+
+.menuPerfil{
+  width: 100%;
+  background: $pretoClaro;
+  min-height: 50px;
+
+
+  li {
+    display: inline-block;
+    font-size: 16px;
+    color: $branco;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: OpenSans-Italic;
+    text-align: center;
+    width: 20%;
+    float: left;
+
+  }
+
+
+
+  .colorUm{
+  	border-bottom: 6px solid #9F503C;
+  }
+  .colorDois{
+  	border-bottom: 6px solid #F2CF65;
+  }
+  .colorTres{
+  	border-bottom: 6px solid #51924F;
+  }
+  .colorQuatro{
+  	border-bottom: 6px solid #A78D96;
+  }
+  .colorCinco{
+  	border-bottom: 6px solid #D08551;
+  }
+
+  a {
+    transition: .2s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    .icon {
+      margin-right: 8px;
+      font-size: 22px;
+      cursor:pointer;
+    }
+
+    .icon-estante:before,
+    .icon-seguindo:before,
+    .icon-seguidores:before,
+    .icon-foto:before,
+    .icon-configuracao:before,
+    .icon-userAdd:before,
+    .icon-userVal:before {
+      margin-top: 5px;
+      cursor:pointer;
+    }
+  }
+}
+
+.amigosVal{
+
+	button{
+		border: none;
+	  	border-radius: 8px;
+	  	background: transparent;
+	    font-size: 16px;
+	  	text-align: center;
+	  	color: $branco;
+	    font-family: OpenSans-Italic;
+	  	@include inline-block;
+	    transition: .3s;
+		transform: translateZ(0) scale(1);
+		outline: none;
+		width:100%;
+		padding: 4px 0;
+		cursor:pointer;
+
+		&:hover{
+			opacity: 0.8;
+		}
+
+	}
+
+	.button-following{
+		cursor:pointer;
+
+	  	.following-text{
+		  display: block;
+		  transition: .3s;
+		}	
+
+	   	.follow-text{
+		   display: none;				   	
+		}
+	}
+
+	.button-follow{
+		cursor:pointer;
+
+	  	.following-text{
+		  display: none;
+		  transition: .3s;
+		}	
+
+	   	.follow-text{
+		   display: block;				   	
+		}
+	}		
+}
+
+
+/*=====================================
+  Galeria
+======================================*/
+#galeria{
+	.container{
+	   padding-top: 90px;
+	}
+
+	.galeria{
+		margin-bottom: 1.2529137529%;
+
+		@include mobile-sm {			
+				width: 30.494172%;
+		}
+
+		@include mobile-pq {
+			width: 47.494172%;
+			margin-bottom: -0.747086%;
+		}
+	}
+
+	.fotoGaleria{
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+		text-align: center;
+
+		
+		.img {
+		   display: inline-block;
+		   background-position: 50% 50%;
+		   background-size: cover;
+		   height: 0px;
+		   width: 100%;
+		   padding-top: 100%;
+		   position: relative;
+		} 
+
+
+		a{
+			position: relative;
+
+			&:after{
+			   	content: "\E00C";
+			    vertical-align: top;
+			    zoom: 1;
+			    font-family: 'Icons';
+			    font-style: normal;
+			    font-weight: normal;
+			    line-height: 1;
+			    -webkit-font-smoothing: antialiased;
+			    -moz-osx-font-smoothing: grayscale;
+			    display: block;
+			    width: 80px;
+			    height: 80px;
+			    position: absolute;
+			    z-index: 5;
+			    color: $branco;
+			    top: 35%;
+			    left: 35%;
+			    transition: 0.2s;
+			    font-size: 30px;
+			    background: rgba(0,0,0,0.6);
+			    border-radius: 100%;
+			    line-height: 80px;
+			    transform: scale(1.5) translateZ(0);
+	 			opacity: 0;
+
+	 			@include mobile-sm {
+	 				display: none;
+	 			}
+	     	}
+
+		    &:hover {
+		    	&:after{			
+					transform: scale(1) translateZ(0);
+	        		opacity: 1;
+	          	}
+	        }
+		}               
+	}
+	
+}
+
+
+/*=====================================
+  configuração
+======================================*/
+#configuracao{
+
+	@include mobile-sm {
+		.col-lg-6{
+			width: 97%;
+		}
+	}
+
+	.container{
+	   padding-top: 130px;
+	}
+
+	form {
+		.row{
+			 margin:20px 0 0;
+		}
+	}
+
+	.confi{
+		.selectricWrapper{
+			width: 100%;
+			margin-left: 0px;
+		}
+	}
+
+	.legendTopo{
+		margin-bottom: 0;
+		padding: 20px 0;
+	}
+
+	textarea {
+	    background: none;
+	    border: 1px solid $pretoClaro;
+	    width: 100%;
+	    padding: 10px;
+	    box-sizing: border-box;
+	    color: #555;
+	    font-size: 15px;
+	    transition: .2s;
+	    border-radius: 10px;
+	    height: 130px; 
+	    overflow: auto;
+
+	    &:focus {
+	      border-color: #999;
+	      background: rgba(255, 255, 255, 0.1);
+	      outline: none;
+	      box-shadow: none;
+	    }
+	}
+
+	.caracteres{
+		font-family: OpenSans-Italic;
+		font-size: 12px;
+		text-align: right;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+
+
+	.uploads{
+		padding: 0 50px;
+
+		@include mobile {
+			padding: 0;
+		}
+
+		@include mobile-sm {
+			padding: 0 30%;
+		}
+
+		@include mobile-pqs {
+			padding: 0 20%;
+		}
+
+	  .file {
+	    width: 170px;
+	    height: 240px;
+	    float: left;
+
+	    &+.file {
+	      margin-left: 20px;
+	    }
+
+
+	    h5 {
+	      font-family: open_sansbold;
+	      font-size: 13px;
+	      text-align: center;
+	      text-transform: uppercase;
+	      margin-bottom: 10px;
+	    }
+
+	    .photo {
+	      width: 170px;
+	      height: 170px;
+	      background-image: url(img/capa.jpg);
+	      background-size: cover;
+	      background-position: 50% 50%;
+	      background-repeat: no-repeat;
+	      margin-bottom: 10px;
+	      border-radius: 100%;
+
+	      &.perfil {
+	        background-image: url(img/avatar.jpg);
+	      }
+
+
+	      img {
+	        width: 170px;
+	        height: 170px;
+	        display: none;
+	        border-radius: 100%;
+	        background-size: cover;
+		    background-position: 50% 50%;
+		    background-repeat: no-repeat;
+
+	      }
+	    }
+
+	    .btn-upload {
+	      width: 170px;
+	      height: 40px;
+	      position: relative;
+
+
+	      input {
+	        width: 170px;
+	        height: 220px;
+	        position: absolute;
+	        bottom: 0;
+	        left: 0;
+	        z-index: 2;
+	        opacity: 0;
+	        cursor: pointer;
+	      }
+
+	      .btn-layer {
+	        background-color: $marromClaro;
+	        width: 100%;
+	        height: 100%;
+	        position: absolute;
+	        top: 0;
+	        left: 0;
+	        line-height: 40px;
+	        font-family: open_sansbold;
+	        font-size: 15px;
+	        color: $branco;
+	        text-align: center;
+	        text-transform: uppercase;
+	      }
+	    }
+
+	    .btn-delete {
+	      background-color: rgba(159,80,60,0.5);
+	      width: 170px;
+	      height: 40px;
+	      line-height: 40px;
+	      font-family: open_sansbold;
+	      font-size: 15px;
+	      color: #4D3D34;
+	      text-align: center;
+	      text-transform: uppercase;
+	      display: none;
+	    }
+
+	    &.has-file {
+	      .btn-upload {
+	        display: none;
+	      }
+
+	      .btn-delete {
+	        display: block;
+	      }
+
+	      .photo img {
+	        display: block;
+	      }
+	    }
+	  }
+	}
+
+	.excluiConta{
+		padding: 60px 0;
+
+		button{
+		   border: none;
+	  	   background: $verdeEscuro;
+	  	   border-bottom: 2px solid $pretoClaro;
+	  	   border-radius: 8px;
+	       font-size: 16px;
+	  	   padding:0 30px;
+	  	   text-align: center;
+	  	   height: 40px;
+	  	   color:$branco;
+	  	   @include inline-block;
+	       transition: .2s;
+		   transform: translateZ(0) scale(1);
+		   outline: none;
+		   margin-top: 10px;
+
+		   &:hover{
+			background: $pretoClaro;
+	  		border-bottom: 2px solid $verdeEscuro;
+		  }
+		}
+	}
+}
+
+
+/*=====================================
+  check in beer - Pesquisa
+======================================*/
+#check{
+	.container{
+	   padding-top: 130px;
+	}
+
+	.cervejaCheck{
+		.nomeCerveja{
+		   background-color: $verdeClaro;
+		   width: 100%;
+		   text-align: left;
+		   color:$branco;   
+		   border-radius: 15px 15px 0px 0;
+  		   padding: 0.8em 0;
+  		   font-family: OpenSans-Italic;
+  		   font-size: 20px;
+  		   padding: 10px;
+
+		}
+
+		.rotulo{
+	    	width: 110px;
+	        float: left;
+        }
+
+        .infoCerveja{
+        	float: left;
+
+        	p{
+        		font-family: open_sansregular;
+			    font-size: 16px;
+			    color: #A38364;
+			    line-height: 10px;
+			    text-align: left;
+			    margin-left: 30px;
+        	}
+        }
+
+        .infoAdd{
+			width: 100%;
+			border-top: 1px solid $marromClaro;
+			border-bottom: 1px solid $marromClaro;
+			float: left;
+			padding-bottom: 2px;
+        }
+
+        button{
+        	height: 40px;
+			border: none;
+			background: $verdeClaro;
+			color: #FFF;
+			@include inline-block;
+			padding: 0 60px;
+			border-bottom: 2px solid $pretoClaro;
+			border-radius: 10px;
+			text-transform: uppercase;
+			font: 14px/40px 'open_sansbold';
+			transition: .2s;
+			transform: translateZ(0) scale(1);
+			outline: none;
+			margin: 5px 0;
+
+			&:hover{
+				background:$pretoClaro ;
+				border-bottom: 2px solid $verdeClaro;
+			}
+        }
+	}
+}
+
+/*=====================================
+  check in beer
+======================================*/
+
+#checkin{
+	.container{
+	   padding-top: 130px;
+	}
+
+	.col-lg-12{
+		margin-top: 0;
+	}
+	.col-lg-8{
+		margin-left: 0;
+	}
+
+	.col-lg-4{
+		float: right;
+	}
+
+	@include tablet {
+		.col-lg-10 {
+			width:75.827506%;
+		}
+	}
+
+	@include mobile-sm {
+		.col-lg-4 {
+			width: 97%;
+		}
+
+		.col-lg-8 {
+			width: 97%;
+		}
+	}
+
+	@include mobile-pq {
+		.col-lg-10 {
+			width: 67.827506%;
+		}
+	}
+
+	.rotulo{
+		width: 110px;
+		float: left;
+
+		@include mobile {
+			width: 90px;
+		}
+
+		@include mobile-sm {
+			width: 80px;
+		}
+
+		@include mobile-pq {
+			margin: -12px 9px 0 0; 
+		}
+	}
+
+	form{
+		.row {
+	   		margin: 0px 0 0;
+	    }
+
+	    textarea{
+	    	height: 100px;
+
+	    	@include mobile-sm {
+	    		height: 80px;
+	    	}
+	    }
+
+	    .caracteres{
+			font-family: OpenSans-Italic;
+			font-size: 12px;
+			text-align: right;
+			width: 97%;
+			margin: 0 auto;
+		}
+
+		.uploads{
+			padding: 0 0px;
+
+			@include mobile {
+				padding: 0;
+			}
+
+			@include mobile-sm {
+				padding: 0 0%;
+			}
+
+
+		  .file {
+		    width: 100%;
+		    height: 240px;
+		    float: left;
+
+		    &+.file {
+		      margin-left: 20px;
+		    }
+
+
+		    h5 {
+		      font-family: open_sansbold;
+		      font-size: 13px;
+		      text-align: center;
+		      text-transform: uppercase;
+		      margin-bottom: 10px;
+		    }
+
+		    .photo {
+		      width: 100%;
+		      height: 170px;
+		      background-image: url(img/foto_beer.png);
+		      background-position: 50% 50%;
+		      background-repeat: no-repeat;
+		      background-color: $pretoClaro;
+		      margin-bottom: 10px;
+
+
+		      img {
+		        width: 100%;
+		        height: 170px;
+		        display: none;
+		        background-size: cover;
+			    background-position: 50% 50%;
+			    background-repeat: no-repeat;
+
+		      }
+		    }
+
+		    .btn-upload {
+		      width: 100%;
+		      height: 40px;
+		      position: relative;
+
+
+		      input {
+		        width: 100%;
+		        height: 220px;
+		        position: absolute;
+		        bottom: 0;
+		        left: 0;
+		        z-index: 2;
+		        opacity: 0;
+		        cursor: pointer;
+		      }
+
+		      .btn-layer {
+		        background-color: $marromClaro;
+		        width: 100%;
+		        height: 100%;
+		        position: absolute;
+		        top: 0;
+		        left: 0;
+		        line-height: 40px;
+		        font-family: open_sansbold;
+		        font-size: 15px;
+		        color: $branco;
+		        text-align: center;
+		        text-transform: uppercase;
+		      }
+		    }
+
+		    .btn-delete {
+		      background-color: rgba(159,80,60,0.5);
+		      width: 170px;
+		      height: 40px;
+		      line-height: 40px;
+		      font-family: open_sansbold;
+		      font-size: 15px;
+		      color: #4D3D34;
+		      text-align: center;
+		      text-transform: uppercase;
+		      display: none;
+		    }
+
+		    &.has-file {
+		      .btn-upload {
+		        display: none;
+		      }
+
+		      .btn-delete {
+		        display: block;
+		      }
+
+		      .photo img {
+		        display: block;
+		      }
+		    }
+		  }
+		}
+	}
+
+	.btBeer{
+		text-align: right;
+
+		@include mobile-sm {
+			text-align: center;
+		}	
+
+
+		.bt{
+			padding: 0 100px;
+			background: $verdeClaro;
+		    border-bottom: 2px solid $pretoClaro;
+		    font-size: 22px;
+		    font-family: OpenSans-Italic;
+		    text-transform: none;
+		    height: 50px;
+
+			&:hover{
+				background:$pretoClaro ;
+				border-bottom: 2px solid $verdeClaro;
+			}
+		}
+	}
+}
+
+#ckeckBeer{
+	.validacao{
+		p{
+			text-align: left;
+			font-size: 18px;
+			font-family: OpenSans-Italic;
+
+			@include mobile-pq {
+				font-size: 16px;
+			}
+
+			@include mobile-pqs {
+				font-size: 14px;
+			}
+		}
+	}
+
+	div{
+
+
+		.beer-rating{
+		    background: transparent !important;
+		    overflow: hidden !important;
+		    cursor: pointer;
+		    display: inline-block;
+		    float: left;
+		    width: 50px;
+		    height: 50px;
+		    position: relative;
+		    text-align: center;
+
+			a{				
+				display:none;				
+			}
+
+			&:before{
+				content: "\E001";
+				font-size: 50px;
+				display: inline-block;
+				vertical-align: middle;
+				font-family: 'Icons';
+				font-style: normal;
+			    font-weight: normal;
+			    line-height: 1;
+			    text-rendering: auto;
+			    transform: translate(0, 0);
+			    -webkit-font-smoothing: antialiased;
+			    -moz-osx-font-smoothing: grayscale;
+			    color:#A1A1A1;
+
+			    @include mobile-pq {
+			    	font-size: 40px;
+			    }
+			}
+		}
+
+		.beer-rating-on{
+			&:before{
+				color: #FFDA46;
+			}
+		}
+
+		.beer-rating-hover{
+
+			&:before{
+				color: #93A37A;
+			}
+		}
+
+		.beer-rating-readonly{
+
+		}
+	}
+
+}
+
+
+/*=====================================
+  Informacao
+======================================*/
+
+#informacao{
+
+	.container{
+		padding-top: 130px;
+	}
+
+	.col-lg-6 {
+		@include mobile {
+			width: 97.494172%;
+		}
+	}
+
+
+  	.fotoInformacao{
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+		text-align: center;
+
+		
+		.img {
+		   display: inline-block;
+		   background-position: 50% 50%;
+		   background-repeat: no-repeat;
+		   height: 0px;
+		   width: 100%;
+		   padding-top: 30%;
+		   position: relative;
+
+		   @include mobile {
+			  padding-top: 40%;
+		   }
+
+		   @include mobile-sm {
+			  padding-top: 60%;
+		   }
+
+		   @include mobile-pq {
+			  padding-top: 80%;
+		   }
+		} 
+	}
+
+	.descrInfo{
+		p{
+			font-size: 16px;
+			font-family: open_sansregular;
+			text-align: left;
+		}
+
+		span{
+			font-family: OpenSans-Italic;
+			display: inline-block;
+		}
+	}
+
+
+	.form-contato{
+       margin: 0 auto;
+       float: none;
+       background: rgba(255,255,255, 0.8);
+       border-radius: 20px 20px 0px 0;
+       padding-top: 0;
+
+    	.legend{
+			background-color: $pretoClaro;
+			width: 100%;
+			text-align: center;
+			color:$branco;
+			font-size: 30px;
+			font-family: open_sansbold;
+			border-radius: 15px 15px 0px 0;
+			padding: 0.8em 0;
+
+			@include mobile {
+				font-size: 26px;
+			}
+
+			@include mobile {
+				font-size: 24px;
+			}
+
+			@include mobile-pq {
+				font-size: 20px;
+			}
+        }
+
+        .field {
+        	padding-left: 0px;
+
+        	& + .field {
+		      padding-left: 0px;
+		      padding-right: 40px;
+		    }
+
+		  input[type=email],
+		  input[type=nome],
+		  select {
+		    background: none;
+		    border: 1px solid $pretoClaro;
+		    width: 90%;
+		    padding: 10px;
+		    box-sizing: border-box;
+		    color: #555;
+		    font-size: 15px;
+		    transition: .2s;
+		    border-radius: 10px;
+
+
+		    &:focus {
+		      border-color: #999;
+		      background: rgba(255, 255, 255, 0.1);
+		      outline: none;
+		      box-shadow: none;
+		    }
+  		  }
+        } 
+
+        textarea {
+		    background: none;
+		    border: 1px solid $pretoClaro;
+		    width: 90%;
+		    padding: 10px;
+		    box-sizing: border-box;
+		    color: #555;
+		    font-size: 15px;
+		    transition: .2s;
+		    border-radius: 10px;
+		    height: 130px; 
+		    overflow: auto;
+
+		    &:focus {
+		      border-color: #999;
+		      background: rgba(255, 255, 255, 0.1);
+		      outline: none;
+		      box-shadow: none;
+		    }
+		}
+
+		.caracteres{
+			font-family: OpenSans-Italic;
+			font-size: 12px;
+			text-align: right;
+			width: 88%;
+			margin: 0 auto;
+		}
+
+		.selectricWrapper{
+			margin-left: 28px;
+
+			@include mobile {
+				margin-left: 34px;
+			}
+
+			@include mobile-sm {
+				margin-left: 24px;
+			}
+		}
+
+
+        .form-controls{
+        	text-align: center;
+        	padding: 40px 0;
+
+        	.bt{
+	    	   position: none;
+	    	   display: inline-block;
+        	}
+        } 
+    }
+}
+
+/*=====================================
+  Informacao
+======================================*/
+
+#contCerveja{
+
+	.container{
+		padding-top: 130px;
+	}
+
+	.legendTopo{
+		margin-bottom: -10px;
+	}
+
+	.col-lg-6 {
+
+		@include mobile {
+			width: 97.494172%;
+		}		
+	}
+
+
+	h3{
+		font-family: open_sansbold;
+		font-size: 22px;
+		color: $verde;
+		text-align: left;
+		margin-bottom: 10px;
+	}
+
+	ul{
+		text-align: left;
+		li{
+			font-family: open_sanssemibold;
+			font-size: 16px;
+			margin-bottom: 10px;
+
+			span{
+				font-size: 16px;
+				font-family: OpenSans-Italic;
+				color: $marrom;
+			}
+		}
+	}
+
+	p{
+		text-align: left;
+		font-size: 14px;
+		font-family: open_sansregular;
+
+		@include mobile {
+			font-size: 12px;
+		}
+	}
+
+.cap{
+	position: relative;
+
+	.capaBeer{
+		position: relative;
+
+	    @include mobile-pq {
+	    	width: 100%;
+	    	float: right;
+	    }
+
+	    .foto-capaBeer{
+		  display: inline-block;
+	      width: 100%;
+	      height: 100%;
+	      background-repeat: no-repeat;
+	      margin: 0px;
+	      text-align: center;	      
+
+		    .img-capaBeer {
+		       display: inline-block;
+		       background-position: 50% 50%;
+		       background-size: cover;
+		       height: 0px;
+		       width: 100%;
+		       padding-top: 20%;
+		       position: relative;
+
+		       &:after{
+					content: "";
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					background: rgba(0, 0, 0, 0.3);
+					top: 0;
+					left: 0;
+				}
+		    }
+		}
+	}
+
+	.rotulo{
+		width: 10%;
+	    position: absolute;
+	    top: 22%;
+	    left: 45%;
+	    right: 50%;
+		
+
+		.foto-rotulo{
+			margin: 0px;
+
+			.img-rotulo{
+				padding-top: 100%;
+			}
+		}
+
+	}
+}
+}
+
+.demostracao{
+	height: 40px;
+	  border: none;
+	  background: $pretoClaro;
+	  color: #FFF;
+	  @include inline-block;
+	  padding: 0 60px;
+	  border-bottom: 2px solid $branco;
+	  border-radius: 10px;
+	  text-transform: uppercase;
+	  font: 14px/40px 'open_sansbold';
+	  transition: .2s;
+	  transform: translateZ(0) scale(1);
+	  // position: relative;
+	  outline: none;
+	  position: relative;
+
+	
+
+	a.bt:active, button.bt:active {
+	  transform: translateZ(0) scale(0.96);
+	}
+
+	a.bt:hover, button.bt:hover {
+	  opacity: 0.8;
+	}
+}
+
+.demosCheck{
+	height: 40px;
+	border: none;
+	background: $verdeClaro;
+	color: #FFF;
+	@include inline-block;
+	padding: 0 60px;
+	border-bottom: 2px solid $pretoClaro;
+	border-radius: 10px;
+	text-transform: uppercase;
+	font: 14px/40px 'open_sansbold';
+	transition: .2s;
+	transform: translateZ(0) scale(1);
+	outline: none;
+	margin: 5px 0;
+
+	&:hover{
+		background:$pretoClaro ;
+		border-bottom: 2px solid $verdeClaro;
+	}
+}
+
+.finalizarDe{
+	padding: 10px 100px;
+	background: $verdeClaro;
+    border-bottom: 2px solid $pretoClaro;
+    font-size: 22px;
+    font-family: OpenSans-Italic;
+    text-transform: none;
+    border-radius: 10px;
+    transition: .2s;
+	transform: translateZ(0) scale(1);
+	color: $branco;
+
+	&:hover{
+		background:$pretoClaro ;
+		border-bottom: 2px solid $verdeClaro;
+
+	}
+}
+
