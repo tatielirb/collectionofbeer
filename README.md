@@ -7,6 +7,8 @@ Conclusion project to obtain the title of Technologist in Internet Systems, by t
 Project version in HTML without programming the functions.
 
 Leader: Prof. Ms. Paulo Leal
+Developer: Tatieli Ramos Bento
+Course: Technologist in Internet Systems
 
 Prerequisites:
 
