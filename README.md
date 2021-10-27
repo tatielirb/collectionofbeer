@@ -1,13 +1,13 @@
-Collection of Beer
+# Collection of Beer
 ====================
 
-Summary
+### Summary
 -------
 Conclusion project to obtain the title of Technologist in Internet Systems, by the Internet Systems Course of the Faculty of Technology Alcides Maya -AMTEC.
 
 Project version in HTML without programming the functions.
 
-Advisor:Prof. Ms. Paulo Leal
+Leader: Prof. Ms. Paulo Leal
 
 Prerequisites:
 
